@@ -12,7 +12,7 @@ const DownloadButton = ({ project }) => {
     const xhr = new XMLHttpRequest();
     xhr.open(
       "GET",
-      `http://localhost:3001/download-zip?project=${project}`,
+      `https://uditha-backend-production.up.railway.app/download-zip?project=${project}`,
       true
     );
     xhr.responseType = "blob"; // Expecting a binary file
