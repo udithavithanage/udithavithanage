@@ -38,12 +38,12 @@ const Projects = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
                 <p className="text-gray-700 mb-4">{project.description}</p>
-                <a
+                {/* <a
                   href={project.link}
                   className="text-accent hover:underline font-bold"
                 >
                   View Details
-                </a>
+                </a> */}
               </div>
               {/* Download Button placed at the bottom */}
               <div className="mt-auto">

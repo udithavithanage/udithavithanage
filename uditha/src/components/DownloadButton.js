@@ -66,7 +66,7 @@ const DownloadButton = ({ project }) => {
           onClick={handleDownload}
           className="px-8 py-3 bg-blue-600 text-white rounded-xl shadow-lg transform hover:bg-blue-700 hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          Download ZIP Folder
+          Download setup file
         </button>
       )}
     </div>
