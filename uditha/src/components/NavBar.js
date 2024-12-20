@@ -14,12 +14,14 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
-            src={logo}
-            alt="Company Logo"
-            width={70}
-            className="rounded-full"
-          />
+          <Link to={"home"} smooth={true} duration={500}>
+            <img
+              src={logo}
+              alt="Company Logo"
+              width={55}
+              className="rounded-full cursor-pointer"
+            />
+          </Link>
           <span className="text-2xl font-bold tracking-wide">We see you</span>
         </div>
 
