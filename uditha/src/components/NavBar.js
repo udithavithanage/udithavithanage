@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,15 @@ const Navbar = () => {
     <nav className="bg-primary text-white fixed w-full z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
-        <div className="text-2xl font-bold tracking-wide">VCU</div>
+        <div className="flex items-center space-x-2">
+          <img
+            src={logo}
+            alt="Company Logo"
+            width={70}
+            className="rounded-full"
+          />
+          <span className="text-2xl font-bold tracking-wide">We see you</span>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6">
