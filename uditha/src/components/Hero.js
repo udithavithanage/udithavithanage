@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+// import { FaFacebook, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -20,40 +20,6 @@ const Hero = () => {
         >
           Contact Me
         </a>
-        <div className="flex justify-center space-x-4 mt-20">
-          <a
-            href="https://www.facebook.com/staphane.uditha"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-yellow-500 transition"
-          >
-            <FaFacebook size={24} />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-yellow-500 transition"
-          >
-            <FaTwitter size={24} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/uditha-vithanage-06589631b"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-yellow-500 transition"
-          >
-            <FaLinkedin size={24} />
-          </a>
-          <a
-            href="https://github.com/udithavithanage"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-yellow-500 transition"
-          >
-            <FaGithub size={24} />
-          </a>
-        </div>
       </div>
     </section>
   );
