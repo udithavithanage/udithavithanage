@@ -21,7 +21,7 @@ function App() {
         </h1>
         <iframe
           src="https://videodownloaderv2-9gvseiqgr-udithavithanages-projects.vercel.app/"
-          className="w-full h-[600px] rounded-lg border border-gray-200 scrollbar-thin"
+          className="w-full h-[1000px] rounded-lg border border-gray-200 scrollbar-thin"
         ></iframe>
       </div>
       <Skills />
