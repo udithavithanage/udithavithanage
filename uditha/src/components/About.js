@@ -3,7 +3,7 @@ import propic from "../assets/profile.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="m-20 pt-20">
+    <section id="about" className="pt-20">
       <div className="container mx-auto flex flex-col md:flex-row items-center">
         <img
           src={propic}
