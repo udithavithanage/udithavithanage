@@ -1,4 +1,5 @@
 import React from "react";
+import { FaWhatsapp, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa"; // Import WhatsApp icon from react-icons
 
 const Footer = () => {
   return (
@@ -13,6 +14,40 @@ const Footer = () => {
             </p>
           </div>
 
+          <div className="flex gap-5">
+            <a
+              href="https://wa.me/94713506655" // Redirect to WhatsApp with phone number
+              className="text-xl md:text-2xl hover:text-green-500 transition"
+              target="_blank" // Opens in a new tab or app
+              rel="noopener noreferrer" // Ensures security when opening in a new tab
+            >
+              <FaWhatsapp size={30} />
+            </a>
+            <a
+              href="https://www.facebook.com/staphane.uditha"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl md:text-2xl hover:text-blue-500 transition"
+            >
+              <FaFacebook size={30} />
+            </a>
+            <a
+              href="https://www.instagram.com/uditha_vithanage?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl md:text-2xl hover:text-pink-500 transition"
+            >
+              <FaInstagram size={30} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@uditha_vithanage?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl md:text-2xl hover:text-purple-200 transition"
+            >
+              <FaTiktok size={30} />
+            </a>
+          </div>
           <div className="w-full lg:w-1/3 text-right">
             <a
               href="tel:+94713506655"

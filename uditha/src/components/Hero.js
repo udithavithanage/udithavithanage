@@ -28,20 +28,12 @@ const Hero = () => {
         </a>
         <div className="flex justify-center gap-6 mt-12">
           <a
-            href="https://www.facebook.com/staphane.uditha"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xl md:text-2xl hover:text-yellow-500 transition"
-          >
-            <FaFacebook />
-          </a>
-          <a
             href="https://twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-xl md:text-2xl hover:text-yellow-500 transition"
           >
-            <FaTwitter />
+            <FaTwitter size={30} />
           </a>
           <a
             href="https://www.linkedin.com/in/uditha-vithanage-06589631b"
@@ -49,7 +41,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="text-xl md:text-2xl hover:text-yellow-500 transition"
           >
-            <FaLinkedin />
+            <FaLinkedin size={30} />
           </a>
           <a
             href="https://github.com/udithavithanage"
@@ -57,7 +49,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className="text-xl md:text-2xl hover:text-yellow-500 transition"
           >
-            <FaGithub />
+            <FaGithub size={30} />
           </a>
         </div>
         <div className="mt-12">
