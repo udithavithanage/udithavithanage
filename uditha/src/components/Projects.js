@@ -33,7 +33,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-105 transform transition flex flex-col justify-between h-full"
+              className="bg-gray-100 p-6 rounded-lg shadow-lg hover:scale-95 transform transition flex flex-col justify-between h-full"
             >
               <div>
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>

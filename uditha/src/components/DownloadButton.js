@@ -3,17 +3,14 @@ import React, { useState, useRef } from "react";
 const DownloadButton = ({ project }) => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [progress, setProgress] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const [isCanceled, setIsCanceled] = useState(false);
   const xhrRef = useRef(null);
 
   const handleDownload = () => {
     setIsDownloading(true);
     setProgress(0);
-    setIsPaused(false);
     setIsCanceled(false);
 
-    // Create an XMLHttpRequest to track download progress
     const xhr = new XMLHttpRequest();
     xhrRef.current = xhr;
 
@@ -22,7 +19,7 @@ const DownloadButton = ({ project }) => {
       `https://uditha-backend-production.up.railway.app/download-zip?project=${project}`,
       true
     );
-    xhr.responseType = "blob"; // Expecting a binary file
+    xhr.responseType = "blob";
 
     xhr.onprogress = (event) => {
       if (event.lengthComputable) {
@@ -33,7 +30,6 @@ const DownloadButton = ({ project }) => {
 
     xhr.onload = () => {
       if (xhr.status === 200) {
-        // Create a download link for the user
         const url = window.URL.createObjectURL(new Blob([xhr.response]));
         const link = document.createElement("a");
         link.href = url;
@@ -56,20 +52,8 @@ const DownloadButton = ({ project }) => {
   const resetDownload = () => {
     setIsDownloading(false);
     setProgress(0);
-    setIsPaused(false);
     setIsCanceled(false);
     xhrRef.current = null;
-  };
-
-  const handlePause = () => {
-    if (xhrRef.current) {
-      xhrRef.current.abort();
-      setIsPaused(true);
-    }
-  };
-
-  const handleResume = () => {
-    handleDownload();
   };
 
   const handleCancel = () => {
@@ -82,50 +66,67 @@ const DownloadButton = ({ project }) => {
 
   return (
     <div className="flex flex-col items-center mt-10 space-y-6">
-      {isDownloading ? (
-        <div className="w-80">
-          {/* Progress Bar */}
-          <div className="relative h-4 w-full bg-gray-300 rounded-full shadow-lg">
-            <div
-              className="absolute left-0 top-0 h-full bg-blue-600 rounded-full transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <p className="mt-4 text-gray-700 text-lg font-medium text-center">
-            Downloading... <span className="font-semibold">{progress}%</span>
-          </p>
-          <div className="flex justify-center space-x-4 mt-4">
-            {!isPaused ? (
-              <button
-                onClick={handlePause}
-                className="px-4 py-2 bg-yellow-500 text-white rounded-md shadow-md hover:bg-yellow-600 transition-all"
-              >
-                Pause
-              </button>
-            ) : (
-              <button
-                onClick={handleResume}
-                className="px-4 py-2 bg-green-500 text-white rounded-md shadow-md hover:bg-green-600 transition-all"
-              >
-                Resume
-              </button>
-            )}
-            <button
-              onClick={handleCancel}
-              className="px-4 py-2 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition-all"
-            >
-              Cancel
-            </button>
+      {isDownloading && (
+        <div className="relative size-20">
+          <svg
+            className="size-full -rotate-90"
+            viewBox="0 0 36 36"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="18"
+              cy="18"
+              r="16"
+              fill="none"
+              className="stroke-current text-gray-200 dark:text-neutral-700"
+              strokeWidth="2"
+            ></circle>
+            <circle
+              cx="18"
+              cy="18"
+              r="16"
+              fill="none"
+              className="stroke-current text-blue-600 dark:text-blue-500"
+              strokeWidth="2"
+              strokeDasharray="100"
+              strokeDashoffset={100 - progress}
+              strokeLinecap="round"
+            ></circle>
+          </svg>
+
+          <div className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
+            <span className="text-center text-2xl font-bold text-blue-600 dark:text-blue-500">
+              {progress}%
+            </span>
           </div>
         </div>
-      ) : (
+      )}
+
+      {!isDownloading && !isCanceled && (
         <button
+          className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
           onClick={handleDownload}
-          className="px-8 py-3 bg-blue-600 text-white rounded-xl shadow-lg transform hover:bg-blue-700 hover:scale-105 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
-          Download setup file
+          <svg
+            className="fill-current w-4 h-4 mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+          </svg>
+          <span>Download</span>
         </button>
       )}
+
+      {isDownloading && (
+        <button
+          onClick={handleCancel}
+          className="px-4 py-2 bg-red-500 text-white rounded-md shadow-md hover:bg-red-600 transition-all"
+        >
+          Cancel
+        </button>
+      )}
+
       {isCanceled && (
         <p className="mt-4 text-red-500 text-sm font-medium">
           Download canceled.

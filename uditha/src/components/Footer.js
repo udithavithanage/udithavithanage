@@ -15,7 +15,7 @@ const Footer = () => {
 
           <div className="w-full lg:w-1/3 text-right">
             <a
-              href="tel:+943506655"
+              href="tel:+94713506655"
               className="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded"
             >
               Contact Me: +94 (71) 350 66 55
