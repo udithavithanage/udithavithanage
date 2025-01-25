@@ -6,11 +6,9 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        setIsVisible(entry.isIntersecting); // Update state whenever visibility changes
       },
-      { threshold: 0.3 } // Trigger when 30% of the element is visible
+      { threshold: 0.7 } // Trigger when 30% of the element is visible
     );
 
     const element = document.getElementById("ad-box");
