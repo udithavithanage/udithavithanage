@@ -1,14 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const AdBox = ({ logo, tittle, des, link, color }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is visible
+    );
+
+    const element = document.getElementById("ad-box");
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   return (
     <div className="px-10">
       <div className="max-w-3xl mx-auto">
-        <div className="bg-white border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4">
+        <div
+          id="ad-box"
+          className={`bg-white border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          } transition-all duration-700 ease-in-out`}
+        >
           {/* Icon Section */}
           <div className="w-16 h-16 flex items-center justify-center rounded-full mx-auto sm:mx-0">
             <span className={`text-${color}-500 text-2xl font-bold`}>
-              <img src={logo} />
+              <img src={logo} alt="Ad Logo" />
             </span>
           </div>
           {/* Content Section */}
