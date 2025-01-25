@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const AdBox = ({ logo, tittle, des, link, color }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const adBoxRef = useRef(null); // Create a ref for the element
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -11,14 +12,13 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
       { threshold: 0.1 } // Trigger when 10% of the element is visible
     );
 
-    const element = document.getElementById("ad-box");
-    if (element) {
-      observer.observe(element);
+    if (adBoxRef.current) {
+      observer.observe(adBoxRef.current); // Observe the element using the ref
     }
 
     return () => {
-      if (element) {
-        observer.unobserve(element);
+      if (adBoxRef.current) {
+        observer.unobserve(adBoxRef.current); // Cleanup the observer
       }
     };
   }, []);
@@ -27,7 +27,7 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
     <div className="px-10">
       <div className="max-w-3xl mx-auto">
         <div
-          id="ad-box"
+          ref={adBoxRef} // Attach the ref to the element
           className={`bg-white p-10 border border-gray-300 rounded-lg shadow-md hover:shadow-xl transition-all duration-700 ease-out transform ${
             isVisible
               ? "opacity-100 translate-y-0 scale-100"
