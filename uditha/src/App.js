@@ -41,6 +41,16 @@ Because every bark, meow, and cuddle deserves love and care backed by innovation
         link={"https://petlife-tawny.vercel.app/"}
         color={"yellow"}
       />
+      <br />
+      <AddBox
+        logo={
+          "hhttps://udithavithanage.vercel.app/static/media/logo.0bfee360c9c16e57fd8d.png"
+        }
+        tittle={"VCU Calculators"}
+        des={`A React-based application featuring three interactive calculators for financial planning.`}
+        link={"https://calculators-peach.vercel.app/"}
+        color={"blue"}
+      />
       <Skills />
       <Contact />
       <Footer />
