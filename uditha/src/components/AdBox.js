@@ -8,7 +8,7 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
       ([entry]) => {
         setIsVisible(entry.isIntersecting); // Update state whenever visibility changes
       },
-      { threshold: 0.7 } // Trigger when 30% of the element is visible
+      { threshold: 0.1 } // Trigger when 10% of the element is visible
     );
 
     const element = document.getElementById("ad-box");
