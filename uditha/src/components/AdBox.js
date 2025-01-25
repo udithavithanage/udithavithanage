@@ -28,7 +28,7 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
       <div className="max-w-3xl mx-auto">
         <div
           id="ad-box"
-          className={`bg-white border border-gray-300 rounded-lg shadow-md hover:shadow-xl transition-all duration-700 ease-out transform ${
+          className={`bg-white p-10 border border-gray-300 rounded-lg shadow-md hover:shadow-xl transition-all duration-700 ease-out transform ${
             isVisible
               ? "opacity-100 translate-y-0 scale-100"
               : "opacity-0 translate-y-10 scale-95"
