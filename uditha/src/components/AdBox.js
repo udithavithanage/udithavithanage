@@ -10,7 +10,7 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the element is visible
+      { threshold: 0.3 } // Trigger when 30% of the element is visible
     );
 
     const element = document.getElementById("ad-box");
@@ -30,9 +30,11 @@ const AdBox = ({ logo, tittle, des, link, color }) => {
       <div className="max-w-3xl mx-auto">
         <div
           id="ad-box"
-          className={`bg-white border border-gray-300 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-4 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          } transition-all duration-700 ease-in-out`}
+          className={`bg-white border border-gray-300 rounded-lg shadow-md hover:shadow-xl transition-all duration-700 ease-out transform ${
+            isVisible
+              ? "opacity-100 translate-y-0 scale-100"
+              : "opacity-0 translate-y-10 scale-95"
+          }`}
         >
           {/* Icon Section */}
           <div className="w-16 h-16 flex items-center justify-center rounded-full mx-auto sm:mx-0">
