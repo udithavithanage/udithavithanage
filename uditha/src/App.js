@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-      <div class="w-full flex justify-center items-center px-3">
+      <div class="w-full flex justify-center items-center px-3 mt-5">
         <div
           class="relative w-full max-w-4xl aspect-video rounded-lg shadow-2xl overflow-hidden"
         >
