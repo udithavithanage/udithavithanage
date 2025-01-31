@@ -15,6 +15,15 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+    <div class="flex justify-center items-center h-screen">
+  <iframe
+    src="https://web-video-player2.vercel.app/sample.mp4"
+    allowfullscreen
+    allow="fullscreen"
+    class="w-[300px] h-[250px] border-none"
+  ></iframe>
+</div>
+
       <Projects />
       <AddBox
         logo={
