@@ -24,8 +24,11 @@ function App() {
             class="absolute inset-0 w-full h-full border-none"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          >
+            allowfullscreen
+            webkitallowfullscreen
+        >
+        </iframe>
+
           </iframe>
         </div>
       </div>
