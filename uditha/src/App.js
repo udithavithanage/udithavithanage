@@ -23,7 +23,7 @@ function App() {
             src="https://web-video-player2.vercel.app/sample.mp4"
             class="absolute inset-0 w-full h-full border-none"
             frameborder="0"
-            allow="autoplay; fullscreen"
+            allow="fullscreen"
             allowfullscreen
           >
           </iframe>
