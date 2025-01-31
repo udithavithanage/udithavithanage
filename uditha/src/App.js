@@ -28,8 +28,6 @@ function App() {
             webkitallowfullscreen
         >
         </iframe>
-
-          </iframe>
         </div>
       </div>
       <Projects />
