@@ -15,15 +15,19 @@ function App() {
       <Navbar />
       <Hero />
       <About />
-    <div class="flex justify-center items-center h-screen">
-  <iframe
-    src="http://localhost:3000/sample.mp4"
-    allowfullscreen
-    allow="fullscreen"
-    class="max-w-full max-h-full border-none"
-  ></iframe>
-</div>
-
+      <div class="w-full flex justify-center items-center px-3">
+        <div
+          class="relative w-full max-w-4xl aspect-video rounded-lg shadow-2xl overflow-hidden"
+        >
+          <iframe
+            src="https://web-video-player2.vercel.app/sample.mp4"
+            class="absolute inset-0 w-full h-full border-none"
+            frameborder="0"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
       <Projects />
       <AddBox
         logo={
