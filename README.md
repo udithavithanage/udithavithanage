@@ -8,7 +8,7 @@ Welcome to my GitHub! I am a passionate developer specializing in **web applicat
 
 ![Job Roles Animation](https://camo.githubusercontent.com/aa50b9ca64091b0bb52e076290030d94e41736bab544c3104acaf80b53be7715/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f666f6e743d466972612b436f64652670617573653d3130303026636f6c6f723d3244394546302663656e7465723d74727565267643656e7465723d747275652677696474683d343335266c696e65733d4d4c2d446576656c6f7065723b46756c6c2b537461636b2b446576656c6f7065723b)
 
- <img src="https://github-readme-activity-graph.vercel.app/graph?username=udithavithanage&bg_color=121112&color=f4f0f4&line=3ac1cb&point=1978d2&area=true&hide_border=true" alt="uditha" />
+
 
 <p align="center">
     <img src="https://komarev.com/ghpvc/?username=udithavithanage&label=Profile%20Views&color=0e75b6&style=flat" alt="uditha" />&nbsp;
@@ -24,6 +24,7 @@ Welcome to my GitHub! I am a passionate developer specializing in **web applicat
 ---
 
 <h3 align="center">My Statistics:</h3>
+ <img src="https://github-readme-activity-graph.vercel.app/graph?username=udithavithanage&bg_color=121112&color=f4f0f4&line=3ac1cb&point=1978d2&area=true&hide_border=true" alt="uditha" />
 <p align="center">
 <table align="center" style="background-color: black;">
 <tr border="none">
