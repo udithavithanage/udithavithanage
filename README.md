@@ -57,30 +57,6 @@ Welcome to my GitHub! I am a passionate developer specializing in **web applicat
 
 </div>
 
-## 📂 **Projects**
-
-### 1️⃣ **PetLife - Comprehensive Pet Healthcare and Management Platform**
-
-- 🐾 A pet care platform with features like:
-  - Digitalized vaccination records
-  - Appointment bookings
-  - Community forums and pet adoption
-  - E-commerce for pet products
-
-### 2️⃣ **Ticket Pool System**
-
-- 🎟️ A real-time ticket pool management system built with **Node.js** and **Express.js**.
-
-### 3️⃣ **Chat Application**
-
-- 💬 A real-time chat platform featuring:
-  - Time-stamped messages
-  - Categorization of sent/received messages
-  - Additional options via message icons
-- Built using **WebSockets**, **React**, and **Node.js**.
-
----
-
 ## 🌐 **Get Involved**
 
 Contributions are welcome! Explore, fork, and improve my projects.  
