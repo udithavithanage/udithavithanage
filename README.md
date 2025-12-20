@@ -17,7 +17,7 @@ Welcome to my GitHub! I am a passionate developer specializing in **web applicat
 
 ## 🎥 **Portfolio Showcase**
 
-### 🌐 [Live Portfolio](https://udithavithanageofficial.vercel.app/)
+### 🌐 [Live Portfolio](https://udithav.me)
 
 🚀 Check out my portfolio in action! Below is a preview of some of my work:
 
