@@ -1,0 +1,131 @@
+<svg viewBox="0 0 1000 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Experience — WSO2, University of Westminster">
+  <style>
+    :root {
+      --bone: #FFFFFF;
+      --muted: #FFFFFF;
+      --dim: #FFFFFF;
+      --rule: #FFFFFF;
+      --accent: #FFFFFF;
+      --node-bg: #000000;
+      --core-bg: #000000;
+      --ghost: #FFFFFF;
+      --ink: #FFFFFF;
+      --paper: #000000;
+    }
+
+    .mono {
+      font-family: ui-monospace, "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    }
+
+    .rise {
+      opacity: 0;
+      animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .a1 { animation-delay: .15s; }
+    .a2 { animation-delay: .35s; }
+    .a3 { animation-delay: .55s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise {
+        animation: none;
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <!-- Timeline -->
+  <line x1="120" y1="10" x2="120" y2="240"
+        stroke="var(--rule)"
+        stroke-width="1"
+        opacity=".4"/>
+
+  <!-- WSO2 -->
+  <g class="rise a1">
+    <text class="mono" x="48" y="42"
+          font-size="12"
+          fill="var(--accent)"
+          letter-spacing="2">
+      2026
+    </text>
+
+    <text class="mono" x="136" y="42"
+          font-size="15"
+          fill="var(--bone)">
+      WSO2 · Software Engineering Intern
+    </text>
+
+    <text class="mono" x="136" y="68"
+          font-size="14"
+          fill="var(--muted)">
+      built backend and product features in a production engineering environment
+    </text>
+
+    <text class="mono" x="136" y="90"
+          font-size="14"
+          fill="var(--muted)">
+      worked across practical systems, APIs, and developer workflows
+    </text>
+  </g>
+
+  <!-- University -->
+  <g class="rise a2">
+    <text class="mono" x="48" y="118"
+          font-size="12"
+          fill="var(--accent)"
+          letter-spacing="2">
+      2026
+    </text>
+
+    <text class="mono" x="136" y="118"
+          font-size="15"
+          fill="var(--bone)">
+      University of Westminster · Final-year Computer Science Student
+    </text>
+
+    <text class="mono" x="136" y="144"
+          font-size="14"
+          fill="var(--muted)">
+      coursework and projects centered on full-stack development and software engineering
+    </text>
+
+    <text class="mono" x="136" y="166"
+          font-size="14"
+          fill="var(--muted)">
+      focused on building maintainable interfaces, APIs, and developer tools
+    </text>
+  </g>
+
+  <!-- NOW -->
+  <g class="rise a3">
+    <text class="mono" x="48" y="194"
+          font-size="12"
+          fill="var(--accent)"
+          letter-spacing="2">
+      NOW
+    </text>
+
+    <text class="mono" x="136" y="194"
+          font-size="15"
+          fill="var(--bone)">
+      Open to internships, collaboration, and product-focused work
+    </text>
+
+    <text class="mono" x="136" y="220"
+          font-size="14"
+          fill="var(--muted)">
+      based in Colombo, Sri Lanka · reachable via udithav.me
+    </text>
+  </g>
+</svg>
